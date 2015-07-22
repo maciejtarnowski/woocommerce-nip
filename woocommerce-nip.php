@@ -75,3 +75,12 @@ function add_nip_to_billing_info($order)
 {
     echo '<p><strong>' . __('NIP') . ':</strong> ' . (get_post_meta($order->id, 'nip', true) ? : 'brak') . '</p>';
 }
+
+add_filter('woocommerce_email_order_meta_keys', 'add_nip_to_order_email', 10, 1);
+
+function add_nip_to_order_email($keys)
+{
+    $keys['NIP'] = 'nip';
+
+    return $keys;
+}

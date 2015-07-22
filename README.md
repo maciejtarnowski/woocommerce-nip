@@ -7,6 +7,7 @@ Wtyczka dodaje pole NIP do ekranu szczegółów zamówienia w WooCommerce
 - waliduje pole pod względem długości, numeryczności i poprawności sumy kontrolnej
 - zapisuje wartość pola w metadanych zamówienia
 - wyświetla wartość pola w szczegółach zamówienia w panelu
+- dodaje NIP do maila z potwierdzeniem dla klienta i powiadomieniem o nowym zamówieniu
 
 ## Uwaga
 Wymaga PHP w wersji 5.4+ ze względu na krótką notację tablic
