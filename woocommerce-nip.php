@@ -38,9 +38,9 @@ function validate_nip($nip)
 
     $nip = explode('', $nip);
     $digits = array_map('intval', $nip);
-    $checksum = ((6 * $dig[0]) + (5 * $dig[1]) + (7 * $dig[2]) + (2 * $dig[3]) + (3 * $dig[4]) + (4 * $dig[5]) + (5 * $dig[6]) + (6 * $dig[7]) + (7 * $dig[8])) % 11;
+    $checksum = ((6 * $digits[0]) + (5 * $digits[1]) + (7 * $digits[2]) + (2 * $digits[3]) + (3 * $digits[4]) + (4 * $digits[5]) + (5 * $digits[6]) + (6 * $digits[7]) + (7 * $digits[8])) % 11;
 
-    if ($dig[9] == $checksum) {
+    if ($digits[9] == $checksum) {
         return true;
     }
 
